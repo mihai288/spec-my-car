@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Play', sans-serif;
+  background: linear-gradient(45deg, #ffffff, #ffffff);
+  color: black;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Play', sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: "Bungee Tint", sans-serif;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.input-container,
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.user-input {
+  padding: 12px 16px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 300px;
+  transition: 0.3s ease;
+  font-size: 16px;
+}
+
+.user-input:focus {
+  outline: none;
+  border-color: #ad4646;
+  box-shadow: 0 0 5px rgba(173, 70, 70, 0.5);
+}
+
+#submit-btn {
+  padding: 12px 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-family: 'Play', sans-serif;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  font-size: 16px;
+}
+
+#submit-btn:hover {
+  background-color: #dadada;
+  color: black;
+}
+
+img {
+  width: 10%;
+  height: auto;
+}
+
+footer {
+  color: black;
+  background-color: #f8f8f8;
+  margin-top: 40vh;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  flex-wrap: wrap;
+  border-top: 1px solid #ccc;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ad4646;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: black;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.car-info {
+  display: none;
+  justify-content: center;
+  margin-top: 30px;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.info-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+}
+
+/* Scrollbar frumos */
+.info-container::-webkit-scrollbar {
+  width: 8px;
+}
+.info-container::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.6);
+  border-radius: 10px;
+}
+.info-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#close-btn {
+  border: none;
+  padding: 12px 20px;
+  margin-top: 25px;
+  font-family: "Play", sans-serif;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+#close-btn:hover {
+  background-color: #dadada;
+  color: black;
+}
+
+.close-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsivitate */
+@media (max-width: 768px) {
+  .input-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-input {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .info-container {
+    max-height: none;
+    padding: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
